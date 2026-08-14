@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-badge-agent",
+  "version": "1.0.0",
+  "description": "Scrapes Credly, TryHackMe, Microsoft Learn, and Google Skills Boost public profiles and regenerates a badges.json + badges.html for a personal portfolio site.",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape-badges.mjs",
+    "render": "node scripts/render-badges.mjs",
+    "update": "npm run scrape && npm run render"
+  },
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}
