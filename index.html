@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name] — [Your Title]</title>
+<meta name="description" content="[One-line summary of what you do]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1720;
+    --bg-raised:#161F2B;
+    --ink:#E8ECF1;
+    --ink-dim:#8A97A6;
+    --line:#2A3644;
+    --gold:#C9A227;
+    --teal:#2E6F6B;
+    --radius:2px;
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'IBM Plex Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+  }
+
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header / nav ---------- */
+  header.site{
+    position:sticky; top:0; z-index:10;
+    background:rgba(15,23,32,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
+  .brand{font-family:var(--mono); font-size:14px; letter-spacing:0.06em; color:var(--gold); text-decoration:none;}
+  nav.site-nav ul{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  nav.site-nav a{font-family:var(--mono); font-size:13px; text-decoration:none; color:var(--ink-dim); letter-spacing:0.04em;}
+  nav.site-nav a:hover{color:var(--ink);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:96px 0 72px; border-bottom:1px solid var(--line);}
+  .hero .eyebrow{font-family:var(--mono); font-size:13px; color:var(--gold); letter-spacing:0.08em; margin-bottom:18px;}
+  .hero h1{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(2.4rem, 5vw, 4rem);
+    line-height:1.05; margin:0 0 20px;
+  }
+  .hero .thesis{font-size:1.15rem; color:var(--ink-dim); max-width:60ch; margin:0 0 32px;}
+  .hero .actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; font-family:var(--mono); font-size:13px; letter-spacing:0.04em;
+    padding:12px 20px; border-radius:var(--radius); text-decoration:none;
+  }
+  .btn.primary{background:var(--gold); color:#171208;}
+  .btn.ghost{border:1px solid var(--line); color:var(--ink);}
+
+  /* ---------- Section shell ---------- */
+  section{padding:72px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex; align-items:baseline; gap:16px; margin-bottom:36px;}
+  .section-head .tag{font-family:var(--mono); font-size:12px; color:var(--teal); letter-spacing:0.1em;}
+  .section-head h2{font-family:var(--display); font-size:1.75rem; margin:0;}
+
+  /* ---------- About / values ---------- */
+  .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:48px;}
+  @media (max-width:700px){ .about-grid{grid-template-columns:1fr;} }
+  .values{list-style:none; margin:0; padding:0;}
+  .values li{padding:14px 0; border-top:1px solid var(--line);}
+  .values li:first-child{border-top:none;}
+  .values .k{font-family:var(--mono); font-size:12px; color:var(--ink-dim); display:block; margin-bottom:4px;}
+
+  /* ---------- Experience timeline ---------- */
+  .timeline{list-style:none; margin:0; padding:0;}
+  .timeline li{display:grid; grid-template-columns:140px 1fr; gap:24px; padding:24px 0; border-top:1px solid var(--line);}
+  .timeline li:first-child{border-top:none;}
+  @media (max-width:600px){ .timeline li{grid-template-columns:1fr; gap:6px;} }
+  .timeline .when{font-family:var(--mono); font-size:12px; color:var(--gold);}
+  .timeline h3{margin:0 0 6px; font-family:var(--display); font-size:1.1rem;}
+  .timeline p{margin:0; color:var(--ink-dim);}
+
+  /* ---------- Skills ---------- */
+  .skills{display:flex; flex-wrap:wrap; gap:10px;}
+  .skills span{
+    font-family:var(--mono); font-size:12.5px; padding:8px 14px;
+    border:1px solid var(--line); border-radius:var(--radius); color:var(--ink-dim);
+  }
+
+  /* ---------- Credentials / badges (signature element) ---------- */
+  .credentials .meta{font-family:var(--mono); font-size:12px; color:var(--ink-dim); margin-bottom:28px;}
+  .ledger{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:20px;}
+  .seal{
+    border:1px dashed var(--line); border-radius:50%;
+    aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:14px; gap:8px; position:relative;
+  }
+  .seal img{width:44px; height:44px; object-fit:contain;}
+  .seal .name{font-family:var(--mono); font-size:10.5px; color:var(--ink-dim); line-height:1.3;}
+  .seal::before{
+    content:""; position:absolute; inset:6px; border:1px solid var(--line); border-radius:50%; opacity:0.5;
+  }
+  .platform-label{font-family:var(--mono); font-size:11px; color:var(--teal); letter-spacing:0.08em; margin:32px 0 14px;}
+  .platform-label:first-child{margin-top:0;}
+  .credentials-empty{color:var(--ink-dim); font-size:14px;}
+
+  /* ---------- Best work ---------- */
+  .case{padding:28px 0; border-top:1px solid var(--line);}
+  .case:first-child{border-top:none;}
+  .case h3{font-family:var(--display); font-size:1.2rem; margin:0 0 10px;}
+  .case p{margin:0 0 10px; color:var(--ink-dim);}
+  .case .result{font-family:var(--mono); font-size:13px; color:var(--gold);}
+
+  /* ---------- References ---------- */
+  .refs{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;}
+  .refs .card{border:1px solid var(--line); padding:20px; border-radius:var(--radius);}
+  .refs .name{font-family:var(--display); font-size:1.05rem; margin:0 0 4px;}
+  .refs .role{font-family:var(--mono); font-size:12px; color:var(--ink-dim); margin:0 0 10px;}
+
+  /* ---------- Footer ---------- */
+  footer{padding:48px 0; text-align:center;}
+  footer p{font-family:var(--mono); font-size:12px; color:var(--ink-dim);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">[YN]</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#work">Best Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">[YOUR FIELD, e.g. CYBERSECURITY CONSULTANT]</p>
+      <h1>[Your Name]</h1>
+      <p class="thesis">[One or two sentences on what you specialize in and what makes your approach distinct — replace this placeholder with your real intro.]</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#credentials">View credentials</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">01</span><h2>About</h2></div>
+      <div class="about-grid">
+        <div>
+          <p>[A few sentences about your background, how you got into this field, and what you're focused on now.]</p>
+        </div>
+        <ul class="values">
+          <li><span class="k">What drives me</span>[One line]</li>
+          <li><span class="k">Working style</span>[One line]</li>
+          <li><span class="k">Currently learning</span>[One line]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">02</span><h2>Experience</h2></div>
+      <ul class="timeline">
+        <li>
+          <span class="when">[YYYY — Present]</span>
+          <div><h3>[Job Title], [Company]</h3><p>[One line on scope/impact]</p></div>
+        </li>
+        <li>
+          <span class="when">[YYYY — YYYY]</span>
+          <div><h3>[Job Title], [Company]</h3><p>[One line on scope/impact]</p></div>
+        </li>
+        <li>
+          <span class="when">[YYYY — YYYY]</span>
+          <div><h3>[Degree / Certification], [Institution]</h3><p>[One line, if relevant]</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">03</span><h2>Skills</h2></div>
+      <div class="skills">
+        <span>[Skill]</span><span>[Skill]</span><span>[Skill]</span><span>[Skill]</span><span>[Skill]</span><span>[Skill]</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" class="credentials">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">04</span><h2>Credentials</h2></div>
+      <p class="meta" id="badges-updated">Loading latest credentials…</p>
+      <div id="badges-root"><p class="credentials-empty">Fetching badges.json…</p></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">05</span><h2>Best Work</h2></div>
+
+      <div class="case">
+        <h3>[Project / engagement name]</h3>
+        <p>[What the problem was and what you did about it — 2-3 sentences.]</p>
+        <p class="result">Result: [specific, quantified outcome — e.g. "reduced incident response time by 30%"]</p>
+      </div>
+
+      <div class="case">
+        <h3>[Project / engagement name]</h3>
+        <p>[What the problem was and what you did about it — 2-3 sentences.]</p>
+        <p class="result">Result: [specific, quantified outcome]</p>
+      </div>
+
+      <div class="case">
+        <h3>[Project / engagement name]</h3>
+        <p>[What the problem was and what you did about it — 2-3 sentences.]</p>
+        <p class="result">Result: [specific, quantified outcome]</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="references">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">06</span><h2>References</h2></div>
+      <div class="refs">
+        <div class="card">
+          <p class="name">[Reference Name]</p>
+          <p class="role">[Title, how you worked together]</p>
+          <p>[Optional one-line note, only include if they've agreed to be listed]</p>
+        </div>
+        <div class="card">
+          <p class="name">[Reference Name]</p>
+          <p class="role">[Title, how you worked together]</p>
+          <p>[Optional one-line note, only include if they've agreed to be listed]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">07</span><h2>Contact</h2></div>
+      <p>[Email] · [LinkedIn] · [Location, optional]</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> [Your Name]. Credentials auto-updated via GitHub Actions.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Pull live badge data written by badge-agent/badges.json (see README).
+  // Adjust the path below if you place badges.json somewhere other than repo root.
+  fetch('badge-agent/badges.json')
+    .then(r => { if(!r.ok) throw new Error('not found'); return r.json(); })
+    .then(renderBadges)
+    .catch(() => {
+      document.getElementById('badges-root').innerHTML =
+        '<p class="credentials-empty">Badges will appear here once badge-agent/badges.json exists (runs automatically via GitHub Actions).</p>';
+      document.getElementById('badges-updated').textContent = '';
+    });
+
+  const PLATFORM_LABELS = {
+    credly: 'Credly',
+    tryhackme: 'TryHackMe',
+    microsoftLearn: 'Microsoft Learn',
+    googleSkills: 'Google Skills Boost'
+  };
+
+  function renderBadges(data){
+    const updated = document.getElementById('badges-updated');
+    updated.textContent = 'Last updated ' + new Date(data.updatedAt).toLocaleDateString();
+
+    const root = document.getElementById('badges-root');
+    root.innerHTML = '';
+    let any = false;
+
+    for (const [key, badges] of Object.entries(data.sources || {})) {
+      if (!badges || !badges.length) continue;
+      any = true;
+      const label = document.createElement('p');
+      label.className = 'platform-label';
+      label.textContent = PLATFORM_LABELS[key] || key;
+      root.appendChild(label);
+
+      const grid = document.createElement('div');
+      grid.className = 'ledger';
+      badges.forEach(b => {
+        const seal = document.createElement(b.url ? 'a' : 'div');
+        seal.className = 'seal';
+        if (b.url) seal.href = b.url;
+        seal.innerHTML = (b.image ? `<img src="${b.image}" alt="${b.name}" loading="lazy">` : '') +
+                          `<span class="name">${b.name}</span>`;
+        grid.appendChild(seal);
+      });
+      root.appendChild(grid);
+    }
+
+    if (!any) root.innerHTML = '<p class="credentials-empty">No badges recorded yet — check back after the next scheduled run.</p>';
+  }
+</script>
+
+</body>
+</html>
