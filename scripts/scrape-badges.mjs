@@ -59,16 +59,16 @@ async function scrapeCredly(url) {
 // ---- TryHackMe ----------------------------------------------------------
 // Confirmed selector: badge images carry title="TryHackMe" and their name
 // lives in the alt attribute (a short slug like "owasp-10"). The Badges tab
-// appears to be client-side React state, not a real route — the ?tab=badges
-// query string alone doesn't reliably switch it, so we click the tab too.
+// is a Radix UI tab trigger (role="tab", accessible name "Badges") — a
+// loose text match risked clicking the wrong "Badges" text elsewhere on
+// the page, so we target the role + name directly instead.
 async function scrapeTryHackMe(url) {
   return withPage(async (page) => {
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
 
-    // Best-effort click on a "Badges" tab/link if one exists on the page.
-    const tab = page.getByText(/^badges$/i).first();
-    await tab.click({ timeout: 5000 }).catch(() => {});
-    await page.waitForTimeout(1500); // let the tab's content render/animate in
+    const badgesTab = page.getByRole("tab", { name: "Badges" });
+    await badgesTab.click({ timeout: 8000 }).catch(() => {});
+    await page.waitForTimeout(2000); // let the tab panel render/animate in
 
     await page.waitForSelector('img[title="TryHackMe"]', { timeout: 15000 }).catch(() => {});
 
