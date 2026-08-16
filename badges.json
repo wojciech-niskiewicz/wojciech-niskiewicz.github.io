@@ -1,9 +1,271 @@
 {
-  "updatedAt": "2026-08-16T15:01:43.824Z",
+  "updatedAt": "2026-08-16T15:19:49.576Z",
   "sources": {
-    "credly": [],
+    "credly": [
+      {
+        "name": "IBM and ISC2 Cybersecurity Specialist Professional Certificate",
+        "image": "https://images.credly.com/images/2ba571e7-e90b-4ac4-b99a-984274a56db6/Coursera_20IBM_20and_20ISC2_20Cybersecurity_20Specialist_20Prof_20Cert.png",
+        "url": null
+      },
+      {
+        "name": "Google Cybersecurity Professional Certificate(v.2)",
+        "image": "https://images.credly.com/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob",
+        "url": null
+      },
+      {
+        "name": "Ethical Hacker",
+        "image": "https://images.credly.com/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png",
+        "url": null
+      },
+      {
+        "name": "Cybersecurity Architecture V2",
+        "image": "https://images.credly.com/images/84ce958a-30a6-4036-9944-005c0fce9f81/Cybersecurity_Arch_V2.png",
+        "url": null
+      },
+      {
+        "name": "Introduction to Cybersecurity Tools and Cyberattacks V3",
+        "image": "https://images.credly.com/images/4ccd9157-c68a-4797-b23c-506601198991/blob",
+        "url": null
+      },
+      {
+        "name": "ISC2 Candidate",
+        "image": "https://images.credly.com/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png",
+        "url": null
+      },
+      {
+        "name": "Google AI Professional Certificate",
+        "image": "https://images.credly.com/images/5bd2d506-c95c-4766-a5b1-8da62a3a23b2/blob",
+        "url": null
+      },
+      {
+        "name": "Cybersecurity Case Studies and Capstone Project (V3)",
+        "image": "https://images.credly.com/images/b41b4b80-f9c4-4c35-8e40-327a1a9f63b2/Coursera_20Cybersecurity_20Case_20Studies_20Capstone_20V3.png",
+        "url": null
+      },
+      {
+        "name": "Database Essentials and Vulnerabilities",
+        "image": "https://images.credly.com/images/ef9d282a-8f31-4b0f-9bbb-640a68ea4b7f/Coursera_20Database_20Essentials_20and_20Vulnerabilities.png",
+        "url": null
+      },
+      {
+        "name": "Network Security & Database Vulnerabilities",
+        "image": "https://images.credly.com/images/ac3c7b20-510a-479f-b51f-b9e3972d25db/blob",
+        "url": null
+      },
+      {
+        "name": "Operating Systems: Overview, Administration, and Security",
+        "image": "https://images.credly.com/images/f821064c-8e80-4900-bec2-a799a62157e5/Coursera_20Operating_20Systems_20Overview_20Administration_20and_20Security.png",
+        "url": null
+      },
+      {
+        "name": "Software, Programming, and Database Essentials",
+        "image": "https://images.credly.com/images/ec9c50a6-1253-4eec-a503-765dda21b6d5/image.png",
+        "url": null
+      },
+      {
+        "name": "Hardware and Operating System Essentials",
+        "image": "https://images.credly.com/images/74e18558-da29-41a1-9850-fa73231327a0/image.png",
+        "url": null
+      },
+      {
+        "name": "Cybersecurity Essentials",
+        "image": "https://images.credly.com/images/c1426860-8205-4220-a0d5-5e6d4f07db17/blob",
+        "url": null
+      },
+      {
+        "name": "Networking and Storage Essentials",
+        "image": "https://images.credly.com/images/80194bcb-03a9-4f5f-a31f-71c3a845972d/image.png",
+        "url": null
+      },
+      {
+        "name": "Introduction to Cloud Computing",
+        "image": "https://images.credly.com/images/a9d0fe89-a11c-4266-8940-9eca7762b294/image.png",
+        "url": null
+      },
+      {
+        "name": "IBM Cybersecurity Specialist Professional Certificate",
+        "image": "https://images.credly.com/images/f8cfcc26-b9eb-4e10-a67d-7b6a9b7b1588/image.png",
+        "url": null
+      },
+      {
+        "name": "Introduction to Cybersecurity Careers",
+        "image": "https://images.credly.com/images/a33f51fa-d8f8-4d3d-9dff-464396e7da92/image.png",
+        "url": null
+      },
+      {
+        "name": "Lifelong Learning 2026",
+        "image": "https://images.credly.com/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob",
+        "url": null
+      },
+      {
+        "name": "Cybersecurity Breach Case Studies",
+        "image": "https://images.credly.com/images/d93f9c40-fb19-4aae-ac34-4e068d391115/blob",
+        "url": null
+      },
+      {
+        "name": "Incident Response and Digital Forensics",
+        "image": "https://images.credly.com/images/411edab4-b1d6-4c00-9a32-888ff11c314e/blob",
+        "url": null
+      },
+      {
+        "name": "Penetration Testing, Threat Hunting, and Cryptography",
+        "image": "https://images.credly.com/images/7cb8cab7-476c-4edc-b750-45d64522a782/blob",
+        "url": null
+      }
+    ],
     "tryhackme": [],
-    "microsoftLearn": [],
+    "microsoftLearn": [
+      {
+        "name": "Sc 100 Design Solutions That Align Security Best Practices Priorities",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/sc-100-design-solutions-that-align-security-best-practices-priorities.svg",
+        "url": null
+      },
+      {
+        "name": "Mitigate Threats Using Microsoft 365 Defender",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/mitigate-threats-using-microsoft-365-defender.svg",
+        "url": null
+      },
+      {
+        "name": "Defend Against Threats M365 Microsoft Threat Protection",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/defend-against-threats-m365-microsoft-threat-protection.svg",
+        "url": null
+      },
+      {
+        "name": "Create Configure And Manage Identities",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/create-configure-and-manage-identities.svg",
+        "url": null
+      },
+      {
+        "name": "Design Solutions Secure Privileged Access",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/design-solutions-secure-privileged-access.svg",
+        "url": null
+      },
+      {
+        "name": "Protect Information",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/protect-information.svg",
+        "url": null
+      },
+      {
+        "name": "Design Resiliency Strategy Common Cyberthreats Like Ransomware",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/design-resiliency-strategy-common-cyberthreats-like-ransomware.svg",
+        "url": null
+      },
+      {
+        "name": "Create And Manage Sensitive Information Types",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/create-and-manage-sensitive-information-types.svg",
+        "url": null
+      },
+      {
+        "name": "Generic Badge",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg",
+        "url": null
+      },
+      {
+        "name": "Generic Badge",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/generic-badge.svg",
+        "url": null
+      },
+      {
+        "name": "Classify Data Protection Governance",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/classify-data-protection-governance.svg",
+        "url": null
+      },
+      {
+        "name": "Generic Badge",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/generic-badge.svg",
+        "url": null
+      },
+      {
+        "name": "Design Solutions Align Cloud Adoption Well Architected Framework",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/design-solutions-align-cloud-adoption-well-architected-framework.svg",
+        "url": null
+      },
+      {
+        "name": "Understand Microsoft 365 Encryption",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/understand-microsoft-365-encryption.svg",
+        "url": null
+      },
+      {
+        "name": "Understand Microsoft 365 Cloud Architecture",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/understand-microsoft-365-cloud-architecture.svg",
+        "url": null
+      },
+      {
+        "name": "Understand Microsoft 365 Risk Management",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/understand-microsoft-365-risk-management.svg",
+        "url": null
+      },
+      {
+        "name": "Understand Microsoft 365 Governance",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/understand-microsoft-365-governance.svg",
+        "url": null
+      },
+      {
+        "name": "Introduction Zero Trust Best Practice Frameworks",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/introduction-zero-trust-best-practice-frameworks.svg",
+        "url": null
+      },
+      {
+        "name": "Manage Azure Ad Identity Protection",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/manage-azure-ad-identity-protection.svg",
+        "url": null
+      },
+      {
+        "name": "Microsoft Cloud App Security",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/microsoft-cloud-app-security.svg",
+        "url": null
+      },
+      {
+        "name": "Generic Badge",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg",
+        "url": null
+      },
+      {
+        "name": "Safeguard Your Environment With Microsoft Azure Advanced Threat Protection",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/safeguard-your-environment-with-microsoft-azure-advanced-threat-protection.svg",
+        "url": null
+      },
+      {
+        "name": "Introduction Microsoft 365 Threat Protection",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/introduction-microsoft-365-threat-protection.svg",
+        "url": null
+      },
+      {
+        "name": "Analyze Data In Sentinel",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/analyze-data-in-sentinel.svg",
+        "url": null
+      },
+      {
+        "name": "Perform Device Investigations Microsoft Defender Endpoints",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/perform-device-investigations-microsoft-defender-endpoints.svg",
+        "url": null
+      },
+      {
+        "name": "Configure Manage Automation Microsoft Defender Endpoint",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/configure-manage-automation-microsoft-defender-endpoint.svg",
+        "url": null
+      },
+      {
+        "name": "Protect Against Threats",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/protect-against-threats.svg",
+        "url": null
+      },
+      {
+        "name": "Train The Defenders",
+        "image": "https://learn.microsoft.com/en-us/learn/achievements/train-the-defenders.svg",
+        "url": null
+      },
+      {
+        "name": "Mitigate Incidents In Microsoft 365 Defender",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/mitigate-incidents-in-microsoft-365-defender.svg",
+        "url": null
+      },
+      {
+        "name": "Generic Badge",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/generic-badge.svg",
+        "url": null
+      }
+    ],
     "googleSkills": []
   }
 }
