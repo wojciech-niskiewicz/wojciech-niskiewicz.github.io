@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T16:48:17.758Z",
+  "updatedAt": "2026-08-16T18:16:13.320Z",
   "sources": {
     "credly": [
       {
@@ -128,6 +128,11 @@
       {
         "name": "Defend Against Threats M365 Microsoft Threat Protection",
         "image": "https://learn.microsoft.com/en-us/training/achievements/defend-against-threats-m365-microsoft-threat-protection.svg",
+        "url": null
+      },
+      {
+        "name": "Azure Active Directory Explore",
+        "image": "https://learn.microsoft.com/en-us/training/achievements/azure-active-directory-explore.svg",
         "url": null
       },
       {
