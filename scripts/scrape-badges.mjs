@@ -31,39 +31,40 @@ async function withPage(fn) {
 }
 
 // ---- Credly -----------------------------------------------------------
-// Badge cards on a public Credly profile render (after JS) as elements
-// with class "cr-standard-grid-item" wrapping an image + title link.
+// Confirmed selector: badge images carry a class starting with
+// "EarnedBadgeCardstyles__ImageContainer" (styled-components; the hash
+// suffix can change on Credly redeploys, so we match on the stable prefix).
 async function scrapeCredly(url) {
   return withPage(async (page) => {
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
-    await page.waitForSelector('[data-testid="badge"], .cr-standard-grid-item', { timeout: 15000 }).catch(() => {});
+    await page
+      .waitForSelector('img[class*="EarnedBadgeCardstyles__ImageContainer"]', { timeout: 15000 })
+      .catch(() => {});
 
-    return page.$$eval(
-      '[data-testid="badge"], .cr-standard-grid-item',
-      (nodes) =>
-        nodes.map((n) => {
-          const titleEl = n.querySelector("a, .cr-standard-grid-item-title, img");
-          const imgEl = n.querySelector("img");
-          const linkEl = n.querySelector("a");
+    return page.$$eval('img[class*="EarnedBadgeCardstyles__ImageContainer"]', (imgs) =>
+      imgs
+        .map((img) => {
+          const link = img.closest("a");
           return {
-            name: (titleEl?.getAttribute("alt") || titleEl?.textContent || "").trim(),
-            image: imgEl?.src || null,
-            url: linkEl?.href || null,
+            name: (img.alt || "").trim(),
+            image: img.src || null,
+            url: link ? link.href : null,
           };
-        }).filter((b) => b.name)
+        })
+        .filter((b) => b.name)
     );
   });
 }
 
 // ---- TryHackMe ----------------------------------------------------------
-// Public profile badges render inside elements carrying a "badge" test id
-// or class once the client app hydrates.
+// Confirmed selector: badge images carry title="TryHackMe" and their name
+// lives in the alt attribute (a short slug like "owasp-10").
 async function scrapeTryHackMe(url) {
   return withPage(async (page) => {
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
-    await page.waitForSelector('[class*="badge" i] img, [data-testid*="badge" i]', { timeout: 15000 }).catch(() => {});
+    await page.waitForSelector('img[title="TryHackMe"]', { timeout: 15000 }).catch(() => {});
 
-    return page.$$eval('[class*="badge" i] img', (imgs) =>
+    return page.$$eval('img[title="TryHackMe"]', (imgs) =>
       imgs
         .map((img) => ({
           name: (img.alt || "").trim(),
@@ -76,23 +77,21 @@ async function scrapeTryHackMe(url) {
 }
 
 // ---- Microsoft Learn ------------------------------------------------------
-// Achievements page lists trophy/badge cards with a title + image once
-// the page's client-side data loads.
+// Confirmed selector: achievement images have alt="" (no usable text), but
+// their src is a slug-named SVG like ".../achievements/sc-100-design-....svg"
+// — we derive a readable name from that filename instead.
 async function scrapeMicrosoftLearn(url) {
   return withPage(async (page) => {
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
-    await page.waitForSelector('[class*="achievement" i], [class*="badge" i]', { timeout: 15000 }).catch(() => {});
+    await page.waitForSelector('img[src*="/achievements/"]', { timeout: 15000 }).catch(() => {});
 
-    return page.$$eval('[class*="achievement" i], [class*="badge" i]', (nodes) =>
-      nodes
-        .map((n) => {
-          const img = n.querySelector("img");
-          const title = n.querySelector("[class*='title' i]") || img;
-          return {
-            name: (title?.getAttribute?.("alt") || title?.textContent || "").trim(),
-            image: img?.src || null,
-            url: null,
-          };
+    return page.$$eval('img[src*="/achievements/"]', (imgs) =>
+      imgs
+        .map((img) => {
+          const src = img.src || "";
+          const file = src.split("/").pop().replace(/\.svg(\?.*)?$/, "");
+          const name = file.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+          return { name: name.trim(), image: src || null, url: null };
         })
         .filter((b) => b.name)
     );
