@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T18:16:13.320Z",
+  "updatedAt": "2026-08-17T06:51:36.350Z",
   "sources": {
     "credly": [
       {
@@ -25,11 +25,6 @@
       {
         "name": "Introduction to Cybersecurity Tools and Cyberattacks V3",
         "image": "https://images.credly.com/images/4ccd9157-c68a-4797-b23c-506601198991/blob",
-        "url": null
-      },
-      {
-        "name": "ISC2 Candidate",
-        "image": "https://images.credly.com/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png",
         "url": null
       },
       {
@@ -93,13 +88,18 @@
         "url": null
       },
       {
-        "name": "Lifelong Learning 2026",
-        "image": "https://images.credly.com/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob",
+        "name": "ISC2 Candidate",
+        "image": "https://images.credly.com/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png",
         "url": null
       },
       {
         "name": "Cybersecurity Breach Case Studies",
         "image": "https://images.credly.com/images/d93f9c40-fb19-4aae-ac34-4e068d391115/blob",
+        "url": null
+      },
+      {
+        "name": "Cybersecurity Job Search, Resume, and Interview Prep",
+        "image": "https://images.credly.com/images/a6525eb2-4761-4bdf-b9a0-d28219d5a8ae/image.png",
         "url": null
       },
       {
@@ -110,6 +110,11 @@
       {
         "name": "Penetration Testing, Threat Hunting, and Cryptography",
         "image": "https://images.credly.com/images/7cb8cab7-476c-4edc-b750-45d64522a782/blob",
+        "url": null
+      },
+      {
+        "name": "Lifelong Learning 2026",
+        "image": "https://images.credly.com/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob",
         "url": null
       }
     ],
