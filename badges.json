@@ -1,7 +1,17 @@
 {
-  "updatedAt": "2026-08-24T06:54:46.043Z",
+  "updatedAt": "2026-08-31T12:43:26.547Z",
   "sources": {
     "credly": [
+      {
+        "name": "IBM Cybersecurity Analyst Professional Certificate (V2)",
+        "image": "https://images.credly.com/images/2f194645-bbf5-4f75-a48c-aba81d29e592/Coursera_20IBM_20Cybersecurity_20Analyst_20Professional_20Certificate_20V2.png",
+        "url": null
+      },
+      {
+        "name": "Ethical Hacker",
+        "image": "https://images.credly.com/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png",
+        "url": null
+      },
       {
         "name": "IBM and ISC2 Cybersecurity Specialist Professional Certificate",
         "image": "https://images.credly.com/images/2ba571e7-e90b-4ac4-b99a-984274a56db6/Coursera_20IBM_20and_20ISC2_20Cybersecurity_20Specialist_20Prof_20Cert.png",
@@ -13,8 +23,18 @@
         "url": null
       },
       {
-        "name": "Ethical Hacker",
-        "image": "https://images.credly.com/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png",
+        "name": "Governance, Risk, Compliance, and Data Privacy",
+        "image": "https://images.credly.com/images/5d324f5d-18fa-43ee-8321-be88763c9e14/image.png",
+        "url": null
+      },
+      {
+        "name": "IBM Cybersecurity Specialist Professional Certificate",
+        "image": "https://images.credly.com/images/f8cfcc26-b9eb-4e10-a67d-7b6a9b7b1588/image.png",
+        "url": null
+      },
+      {
+        "name": "Google AI Professional Certificate",
+        "image": "https://images.credly.com/images/5bd2d506-c95c-4766-a5b1-8da62a3a23b2/blob",
         "url": null
       },
       {
@@ -23,13 +43,13 @@
         "url": null
       },
       {
-        "name": "Introduction to Cybersecurity Tools and Cyberattacks V3",
-        "image": "https://images.credly.com/images/4ccd9157-c68a-4797-b23c-506601198991/blob",
+        "name": "ISC2 Candidate",
+        "image": "https://images.credly.com/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png",
         "url": null
       },
       {
-        "name": "Google AI Professional Certificate",
-        "image": "https://images.credly.com/images/5bd2d506-c95c-4766-a5b1-8da62a3a23b2/blob",
+        "name": "Introduction to Cybersecurity Tools and Cyberattacks V3",
+        "image": "https://images.credly.com/images/4ccd9157-c68a-4797-b23c-506601198991/blob",
         "url": null
       },
       {
@@ -78,18 +98,8 @@
         "url": null
       },
       {
-        "name": "IBM Cybersecurity Specialist Professional Certificate",
-        "image": "https://images.credly.com/images/f8cfcc26-b9eb-4e10-a67d-7b6a9b7b1588/image.png",
-        "url": null
-      },
-      {
         "name": "Introduction to Cybersecurity Careers",
         "image": "https://images.credly.com/images/a33f51fa-d8f8-4d3d-9dff-464396e7da92/image.png",
-        "url": null
-      },
-      {
-        "name": "ISC2 Candidate",
-        "image": "https://images.credly.com/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png",
         "url": null
       },
       {
@@ -113,23 +123,13 @@
         "url": null
       },
       {
-        "name": "Lifelong Learning 2026",
-        "image": "https://images.credly.com/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob",
-        "url": null
-      },
-      {
         "name": "IBM Cybersecurity Analyst Professional Certificate",
         "image": "https://images.credly.com/images/a850079a-75bb-41e1-adae-dedfabcf597c/Professional_Certificate_-_IBM_Cybersecurity_Analyst.png",
         "url": null
       },
       {
-        "name": "Governance, Risk, Compliance, and Data Privacy",
-        "image": "https://images.credly.com/images/5d324f5d-18fa-43ee-8321-be88763c9e14/image.png",
-        "url": null
-      },
-      {
-        "name": "IBM Cybersecurity Analyst Professional Certificate (V2)",
-        "image": "https://images.credly.com/images/2f194645-bbf5-4f75-a48c-aba81d29e592/Coursera_20IBM_20Cybersecurity_20Analyst_20Professional_20Certificate_20V2.png",
+        "name": "Lifelong Learning 2026",
+        "image": "https://images.credly.com/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob",
         "url": null
       }
     ],
